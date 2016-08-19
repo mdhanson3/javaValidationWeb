@@ -1,0 +1,98 @@
+<head>	
+	<meta charset="utf-8"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style.css" type="text/css">
+	
+	<script type="text/javascript" src="hover.js"></script>
+</head>
+<body>
+<div class="bd-pageheader">
+<div class="container">
+	<h1>Java Validation</h1>
+	</div>
+</div>
+<div class="main">
+<a class="btn btn-primary" id="collapseButton" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+	Show Error Summary
+</a>
+<div class="collapse" id="collapseExample">
+  <div class="card card-block" id ="errorSummaryContent">
+    <table>
+    	<tr><td>1 Class Name Error</td><td>3 Variable Name Errors</td></tr>
+    	<tr><td>3 Public Variables</td><td>2 Constant Name Errors</td></tr>
+    	<tr><td>2 Function Name Errors</td><td>3 Keyword Errors</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="button-header">
+	<input type="button" errorType="className" id="class-button" class="btn btn-warning toggleButton" aria-pressed="true" value="Class Name" />
+	<input type="button" errorType="variableName" id="variable-name-button" class="btn btn-warning toggleButton" aria-pressed="true" value="Variable Name" />
+	<input type="button" errorType="publicVariable" id="public-variable-button" class="btn btn-warning toggleButton" aria-pressed="true" value="Public Variable" />
+	<input type="button" errorType="functionSpacing" id="function-spacing-button" class="btn btn-secondary toggleButton" aria-pressed="false" value="Function Spacing" />
+	
+</div>
+<div class="button-header">
+	<input type="button" errorType="functionName" id="function-name-button" class="btn btn-warning toggleButton" aria-pressed="true" value="Function Name" />
+	<input type="button" errorType="constantName" id="constant-name-button" class="btn btn-warning toggleButton" aria-pressed="true" value="Constant Name" />
+	<input type="button" errorType="keywordSpacing" id="keyword-spacing-button" class="btn btn-warning toggleButton" aria-pressed="true" value="Keyword Spacing" />
+	<input type="button" id="javadoc-button" class="btn btn-secondary toggleButton" aria-pressed="false" value="Javadoc" />
+</div>
+
+<div class="code-body">
+
+import java.util.*<br />
+<br />
+public class <span class="className highlighted" data-toggle="tooltip" title="Class name uses illegal characters.">someClass</a></span> {<br />
+	<br/>
+    //Variables <br />
+    private goodVar = 1;<br />
+    <span class="publicVariable highlighted" data-toggle="tooltip" title="Variables cannot be public.">public</span> int badVar = 2;<br />
+    <span class="publicVariable highlighted" data-toggle="tooltip" title="Variables cannot be public.">public</span> int badVar2 = 3;<br />
+    <span class="publicVariable highlighted" data-toggle="tooltip" title="Variables cannot be public.">public</span> int <span class="variableName highlighted" data-toggle="tooltip" title="Illegal characters in variable name.">bad_var3</span> = 3;<br />
+    private int <span class="variableName highlighted" data-toggle="tooltip" title="Illegal characters in variable name.">bad_var4</span> = 3;<br />
+    private int <span class="variableName highlighted" data-toggle="tooltip" title="Illegal characters in variable name.">bad_var5</span> = 3;<br />
+<br />
+    //Constants<br/>
+    private final int GOOD_CONSTANT = 1;<br />
+    private final boolean <span class="constantName highlighted" data-toggle="tooltip" title="Illegal characters in constant name.">lower_case_BAD_CONSTANT</span> = false;<br />
+    private final String <span class="constantName highlighted" data-toggle="tooltip" title="Illegal characters in constant name.">alsoLowerCase</span> = "bad constant";<br />
+<br />
+    /** <br />
+    *  This class is poorly named with bad keyword spacing <br />
+    */<br />
+    public void <span class="functionName highlighted" data-toggle="tooltip" title="Function name should start with lowercase.">BadFunctionName</span>(String[] arguments)           {<br />
+<br />
+        for (int i = 0; i < 100; i++) {<br />
+              System.out.pirntln(i);<br />
+        }<br />
+       <span class="keywordSpacing highlighted" data-toggle="tooltip" title="Keyword should be followed by space."> for(int i = 0; i < 100; i++)</span> {<br />
+              System.out.pirntln(i);<br />
+        }<br />
+       <span class="keywordSpacing highlighted" data-toggle="tooltip" title="Keyword should be followed by space."> if(true)</span> {<br />
+<br />
+        }<span class="keywordSpacing highlighted" data-toggle="tooltip" title="Keyword should be followed by space."> else if(true)</span>{<br />
+<br />
+<br />
+            if (true) {<br />
+<br />
+            } else if (true) {<br />
+<br />
+            } else {<br />
+<br />
+            }<br />
+            while (true) {<br />
+<br />
+
+        }<br />
+<br />
+        public void <span class="functionName highlighted" data-toggle="tooltip" title="Function name should start with lowercase.">MyFunction</span>() {<br />
+<br />
+        }<br />
+    }<br />
+</div>
+</div>
+</body>
