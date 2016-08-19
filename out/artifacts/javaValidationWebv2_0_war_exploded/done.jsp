@@ -55,7 +55,7 @@
         <input type="button" errorType="keywordSpacing" id="keyword-spacing-button" class="btn btn-warning toggleButton" aria-pressed="true" value="Keyword Spacing" />
         <input type="button" id="javadoc-button" class="btn btn-secondary toggleButton" aria-pressed="false" value="Javadoc" />
     </div>
-    
+
 <h3>Your file has been uploaded!</h3>
 <p>
     Type: <%= request.getAttribute("type") %>.
