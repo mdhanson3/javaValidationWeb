@@ -46,14 +46,16 @@
         <input type="button" errorType="classError" id="class-button" class="btn btn-warning toggleButton" aria-pressed="true" value="Class Name" />
         <input type="button" errorType="variable" id="variable-name-button" class="btn btn-warning toggleButton" aria-pressed="true" value="Variable Name" />
         <input type="button" errorType="public" id="public-variable-button" class="btn btn-warning toggleButton" aria-pressed="true" value="Public Variable" />
-        <input type="button" errorType="functionSpace" id="function-spacing-button" class="btn btn-secondary toggleButton" aria-pressed="false" value="Function Spacing" />
+       <!-- <input type="button" errorType="functionSpace" id="function-spacing-button" class="btn btn-secondary toggleButton" aria-pressed="false" value="Function Spacing" />
+       -->
 
     </div>
     <div class="button-header">
         <input type="button" errorType="functionName" id="function-name-button" class="btn btn-warning toggleButton" aria-pressed="true" value="Function Name" />
         <input type="button" errorType="constant" id="constant-name-button" class="btn btn-warning toggleButton" aria-pressed="true" value="Constant Name" />
         <input type="button" errorType="keywordSpacing" id="keyword-spacing-button" class="btn btn-warning toggleButton" aria-pressed="true" value="Keyword Spacing" />
-        <input type="button" id="javadoc-button" class="btn btn-secondary toggleButton" aria-pressed="false" value="Javadoc" />
+        <!--<input type="button" id="javadoc-button" class="btn btn-secondary toggleButton" aria-pressed="false" value="Javadoc" />
+        -->
     </div>
 
     <div class="code-body">
