@@ -6,8 +6,6 @@ import java.util.List;
  * Created by student on 4/20/16.
  */
 public class TextTransform {
-    private final String KEYWORD_OPENING_SPAN = "<span class=\"keyword underline\">";
-    private final String CONSTANT_OPENING_SPAN = "<span class=\"constant underline\">";
     private final String OPENING_SPAN = "<span class=\"";
     private final String OPENING_SPAN_CLOSE = " highlighted\">";
     private final String CLOSING_SPAN = "</span>";
