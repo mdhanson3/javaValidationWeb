@@ -8,6 +8,8 @@ import java.util.List;
 public class TextTransform {
     private final String KEYWORD_OPENING_SPAN = "<span class=\"keyword underline\">";
     private final String CONSTANT_OPENING_SPAN = "<span class=\"constant underline\">";
+    private final String OPENING_SPAN = "<span class=\"";
+    private final String OPENING_SPAN_CLOSE = " highlighted\">";
     private final String CLOSING_SPAN = "</span>";
 
     public void convertSpacesToHtmlNbs(List<String> contents) {
@@ -47,7 +49,7 @@ public class TextTransform {
         String middle = lineText.substring(openingSpanIndex, closingSpanIndex);
         String end = lineText.substring(closingSpanIndex);
 
-        String newLineText = start + CONSTANT_OPENING_SPAN + middle + CLOSING_SPAN + end;
+        String newLineText = start + OPENING_SPAN + error.getErrorType() + OPENING_SPAN_CLOSE + middle + CLOSING_SPAN + end;
 
         if (!error.getErrorType().equals("LineLength")) {
             contents.set(error.getLineNumber() -1, newLineText);
