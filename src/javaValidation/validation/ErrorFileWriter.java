@@ -69,7 +69,7 @@ public class ErrorFileWriter {
 
                 out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outputFile), "UTF-8"));
 
-                out.write(HTML_STYLE);
+                //out.write(HTML_STYLE);
                 for (String outputLine : output) {
                     System.out.println("writing");
                     out.write(outputLine + "<br />");

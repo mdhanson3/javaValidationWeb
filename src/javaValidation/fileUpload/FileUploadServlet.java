@@ -98,7 +98,8 @@ public class FileUploadServlet extends HttpServlet {
                 } catch(Exception e) {
                     System.out.println("CAUGHT ERROR");
                     e.printStackTrace();
-                    getServletContext().getRequestDispatcher("/error.jsp").forward(
+                    request.setAttribute("errorMessage", "Sorry bud, there was an error.  Please try again.");
+                    getServletContext().getRequestDispatcher("/index.jsp").forward(
                             request, response);
                 }
 

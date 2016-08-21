@@ -40,6 +40,10 @@
 	margin: 0 auto;
 }
 
+.errorMessage {
+	margin-bottom: 50px;
+}
+
 #collapseButton {
 	width: 100%;
 	margin-top: 5px;

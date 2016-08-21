@@ -8,14 +8,19 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-  <title>$Title$</title>
+  <title>Java Validation</title>
 </head>
 <body>
+<div>
+  ${errorMessage}
+</div>
+<div>
 Select a file to upload: <br />
 <form method="POST" action="FileUploadServlet" enctype="multipart/form-data" >
   <input type="file" name="file" id="file" /> <br/>
   <br />
   <input type="submit" value="Upload" name="upload" id="upload" />
 </form>
+</div>
 </body>
 </html>
