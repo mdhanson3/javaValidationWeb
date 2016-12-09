@@ -33,6 +33,7 @@ public class QuoteAndCommentReplacer {
     public List<String> getFileContents(){
         return fileContents;
     }
+    
     public void replaceQuotesAndComments() {
         findTextToRemoveBounds();
         replaceQuotedText();
