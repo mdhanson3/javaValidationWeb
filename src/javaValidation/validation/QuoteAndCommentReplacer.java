@@ -34,11 +34,8 @@ public class QuoteAndCommentReplacer {
         return fileContents;
     }
     public void replaceQuotesAndComments() {
-
         findTextToRemoveBounds();
         replaceQuotedText();
-
-
     }
 
     private void findTextToRemoveBounds() {
